@@ -49,8 +49,8 @@ class Users extends CActiveRecord
 			array('idRole', 'numerical', 'integerOnly'=>true),
 			array('login, email, photo, lastFirstName, hash', 'length', 'max'=>255),
 			array('password', 'length', 'max'=>32),
-            array('email', 'email', 'on'=>'create'),
-            array('email, login', 'unique', 'on'=>'create'),
+            array('email', 'email', 'on'=>'create, edit'),
+            array('email, login', 'unique', 'on'=>'create, edit'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('idUser, login, email, password, idRole, photo, lastFirstName, ban', 'safe', 'on'=>'search'),

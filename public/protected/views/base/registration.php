@@ -18,7 +18,7 @@
         <?php echo $form->error($model,'email'); ?>
 
         <?php echo $form->labelEx($model,'password', array('class'=>'form-title')); ?><br />
-        <?php echo $form->textField($model,'password', array('class'=>'form-field')); ?>
+        <?php echo $form->passwordField($model,'password', array('class'=>'form-field')); ?>
         <?php echo $form->error($model,'password'); ?>
 
         <?php echo $form->labelEx($model,'lastFirstName', array('class'=>'form-title')); ?><br />

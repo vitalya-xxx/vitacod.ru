@@ -117,9 +117,10 @@ class BaseController extends Controller
 
         if (isset($_GET['idUser'])) {
             $model = Users::model()->findByPk($_GET['idUser']);
+            $model->setScenario('edit'); 
         }
         else {
-            $model = new Users();
+            $model = new Users('create');
         }
 
         if(isset($_POST['Users']))
