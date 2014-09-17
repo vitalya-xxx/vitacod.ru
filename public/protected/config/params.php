@@ -1,6 +1,6 @@
 <?php
 return array(
-    'adminEmail' => 'vitalya-xxx@yandex.ru',
+    'adminEmail' => 'vitalya-xxx2@yandex.ru',
     'accessDeniedPage' => array(
         '7'     => array(),                // superAdmin
         '5'     => array(                  // admin
