@@ -164,8 +164,7 @@ class BaseController extends Controller
             }
         }
         else {
-            $popup = $this->renderPartial('_feedbackform', array('model'=>$model), true);
-            VarDumper::dump($popup);	
+            $popup = $this->renderPartial('_feedbackform', array('model'=>$model), true);	
             echo CJSON::encode(array('popup' => $popup));
             exit();
         }
