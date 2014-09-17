@@ -99,7 +99,7 @@ class Tags extends CActiveRecord
     public static function getMenu($tags){
         $menuArray = array();
         foreach ($tags as $one) {
-            $menuArray[] = array('label'=>$one['text'], 'url'=>array('/articles/list_articles/', 'listType' => 'tags', 'idTag'=>$one['id']));
+            $menuArray[] = array('label'=>$one['textTag'], 'url'=>array('/articles/list_articles/', 'listType' => 'tags', 'idTag'=>$one['idTag']));
         }
         return $menuArray;
     }

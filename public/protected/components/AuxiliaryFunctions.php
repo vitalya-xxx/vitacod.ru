@@ -19,8 +19,8 @@ class AuxiliaryFunctions
             $tagsArray = array();
             foreach ($tags as $key => $tag) {
                 if (!empty($tag['idTag0']['textTag'])) {
-                    $tagsArray[$key]['id']   = $tag['idTag0']['idTag'];
-                    $tagsArray[$key]['text'] = $tag['idTag0']['textTag'];
+                    $tagsArray[$key]['idTag']   = $tag['idTag0']['idTag'];
+                    $tagsArray[$key]['textTag'] = $tag['idTag0']['textTag'];
                 }
             }
             $resultArray = Tags::getMenu($tagsArray);

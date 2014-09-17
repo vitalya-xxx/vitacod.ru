@@ -1365,3 +1365,7 @@ ul.tags li {
     ccursor: pointer;
     margin-left: 40%;
 }
+.listTags {
+    padding: 0 10px;
+}
+

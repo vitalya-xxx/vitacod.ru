@@ -82,9 +82,14 @@
                 <div class="title">222</div>
             </div>
 
-            <!-- 333 -->
+            <!-- TAGS -->
             <div class="sidePanel">
-                <div class="title">333</div>
+                <div class="title">Теги</div>
+                <div class="listTags">
+                    <?php foreach ($this->tags as $tag): ?>
+                        <?php echo CHtml::link($tag['label'], $tag['url'])?>
+                    <?php endforeach; ?>
+                </div>
             </div>
         </div>
         <div style="clear: both"></div>

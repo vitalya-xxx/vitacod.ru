@@ -10,6 +10,7 @@ class BaseController extends Controller
     public $breadcrumbs     = array();
     public $listChat        = null;
     public $randomArt       = null;
+    public $tags            = null;
     public $stateChat       = 1;
 
     /**
@@ -24,7 +25,7 @@ class BaseController extends Controller
         $this->middleMenu   = Mainmenu::getMenu('middle', 'site');
         $this->listChat     = Chat::getListChat();
         $this->randomArt    = Articles::getRandomArticles(10);
-
+        $this->tags         = Tags::getMenu(Tags::model()->findAll());
         $settingChat        = Settings::model()->findByAttributes(array('parameter'=>Yii::app()->params['parameter']['chat']));
         $this->stateChat    = (null != $settingChat) ? (int)$settingChat->value : 0;
 

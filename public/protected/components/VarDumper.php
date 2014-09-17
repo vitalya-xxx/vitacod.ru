@@ -8,8 +8,10 @@ class VarDumper extends CVarDumper {
      * @param integer maximum depth that the dumper should go into the variable. Defaults to 10.
      * @param boolean whether the result should be syntax-highlighted
      */
-    public static function dump($var,$depth=10,$highlight=true){
-        echo self::dumpAsString($var,$depth,$highlight);
-        die();
+    public static function dump($var, $die = true, $depth = 10, $highlight = true){
+        echo self::dumpAsString($var, $depth, $highlight);
+        if ($die) {
+            die();
+        }
     }
 }
