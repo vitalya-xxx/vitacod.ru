@@ -1,0 +1,550 @@
+/* Добавленеи редактирование статей - START*/
+.form-container_with_border {
+    border: 0px solid #dba8cb;
+    background: #e0dff0;
+    background: -webkit-gradient(linear, left top, left bottom, from(#edeff5), to(#e0dff0));
+    background: -webkit-linear-gradient(top, #edeff5, #e0dff0);
+    background: -moz-linear-gradient(top, #edeff5, #e0dff0);
+    background: -ms-linear-gradient(top, #edeff5, #e0dff0);
+    background: -o-linear-gradient(top, #edeff5, #e0dff0);
+    background-image: -ms-linear-gradient(top, #edeff5 0%, #e0dff0 100%);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
+    -moz-box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
+    box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
+    font-family: 'Helvetica Neue',Helvetica,sans-serif;
+    margin: auto;
+    text-decoration: none;
+    vertical-align: middle;
+    min-width:300px;
+    padding:20px;
+    width:618px;
+}
+.form-container {
+    /*border: 0px solid #dba8cb;*/
+    /*background: #e0dff0;*/
+    /*background: -webkit-gradient(linear, left top, left bottom, from(#edeff5), to(#e0dff0));*/
+    /*background: -webkit-linear-gradient(top, #edeff5, #e0dff0);*/
+    /*background: -moz-linear-gradient(top, #edeff5, #e0dff0);*/
+    /*background: -ms-linear-gradient(top, #edeff5, #e0dff0);*/
+    /*background: -o-linear-gradient(top, #edeff5, #e0dff0);*/
+    /*background-image: -ms-linear-gradient(top, #edeff5 0%, #e0dff0 100%);*/
+    /*-webkit-border-radius: 5px;*/
+    /*-moz-border-radius: 5px;*/
+    /*border-radius: 5px;*/
+    /*-webkit-box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;*/
+    /*-moz-box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;*/
+    /*box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;*/
+    font-family: 'Helvetica Neue',Helvetica,sans-serif;
+    margin: auto;
+    text-decoration: none;
+    vertical-align: middle;
+    min-width:300px;
+    padding:20px;
+    width:618px;
+}
+.form-field {
+    border: 1px solid #e7e8f5;
+    background: #fffff0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #4555bf;
+    -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 1px 1px;
+    -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 1px 1px;
+    box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 1px 1px;
+    padding:8px;
+    margin-bottom:20px;
+    width:600px;
+}
+.form-field:focus {
+    background: #fff;
+    color: #472870;
+}
+.form-container h2 {
+    text-shadow: #ffffff 0 1px 0;
+    font-size:18px;
+    margin: 0 0 10px 0;
+    font-weight:bold;
+    text-align:center;
+}
+.form-title {
+    margin-bottom:10px;
+    color: #3f7fcc;
+    text-shadow: #ffffff 0 1px 0;
+}
+.submit-container {
+    float: right;
+    margin-top: 82px;
+    position: relative;
+    text-align: right;
+    width: 344px;
+}
+.submit-button {
+    border: 1px solid #51519e;
+    background: #3689a3;
+    background: -webkit-gradient(linear, left top, left bottom, from(#5a62bf), to(#3689a3));
+    background: -webkit-linear-gradient(top, #5a62bf, #3689a3);
+    background: -moz-linear-gradient(top, #5a62bf, #3689a3);
+    background: -ms-linear-gradient(top, #5a62bf, #3689a3);
+    background: -o-linear-gradient(top, #5a62bf, #3689a3);
+    background-image: -ms-linear-gradient(top, #5a62bf 0%, #3689a3 100%);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+    -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+    box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+    text-shadow: #db7fd0 0 1px 0;
+    color: #ffffff;
+    font-family: helvetica, serif;
+    padding: 8.5px 18px;
+    font-size: 14px;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.submit-button:hover {
+    border: 1px solid #182e9e;
+    text-shadow: #d47fd4 0 1px 0;
+    background: #7893ff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#878dff), to(#7893ff));
+    background: -webkit-linear-gradient(top, #878dff, #7893ff);
+    background: -moz-linear-gradient(top, #878dff, #7893ff);
+    background: -ms-linear-gradient(top, #878dff, #7893ff);
+    background: -o-linear-gradient(top, #878dff, #7893ff);
+    background-image: -ms-linear-gradient(top, #878dff 0%, #7893ff 100%);
+    color: #fff;
+}
+.submit-button:active {
+    text-shadow: #520c4d 0 1px 0;
+    border: 1px solid #152173;
+    background: #22227d;
+    background: -webkit-gradient(linear, left top, left bottom, from(#17176e), to(#7893ff));
+    background: -webkit-linear-gradient(top, #17176e, #22227d);
+    background: -moz-linear-gradient(top, #17176e, #22227d);
+    background: -ms-linear-gradient(top, #17176e, #22227d);
+    background: -o-linear-gradient(top, #17176e, #22227d);
+    background-image: -ms-linear-gradient(top, #17176e 0%, #22227d 100%);
+    color: #fff;
+}
+/* Добавленеи редактирование статей - END*/
+
+/*Форма добавления редактирования категорий - START*/
+#save_category-form {
+    height: 100%;
+}
+/*Форма добавления редактирования категорий - END*/
+/*Форма добавления редактирования разделов - START*/
+#mainmenu-save_menu-form {
+    height: 100%;
+    padding-bottom: 7px;
+}
+
+#saveMenuButtons {
+    float: inherit;
+    margin: -6px 0 6px 278px;
+    width: 349px;
+}
+#articles-form {
+    height: 100%;
+}
+#login-form {
+    height: 100%;
+    padding-bottom: 19px;
+}
+#loginButton {
+    margin: -35px 0 0;
+    width: 75px;
+}
+#loginAdminButton {
+    margin: 0;
+    width: 75px;
+}
+#admins-save_admin-form {
+    height: 100%;
+}
+#saveAdminButton {
+    float: inherit;
+    margin: 0 0 0 472px;
+    width: 144px;
+}
+#forTinyMceError {
+    margin-top: 0;
+}
+#saveArticleButtons {
+    float: inherit;
+    margin: 0 0 0 221px;
+    width: 396px;
+}
+/*Форма добавления редактирования разделов - END*/
+/*Предпросмотр фото - START*/
+.previewPhoto {
+    height: 173px;
+    margin-bottom: 3px;
+    width: 257px;
+}
+.addPhoto {
+    margin-bottom: 8px;
+    width: 257px;
+}
+.photoContainer {
+    height: 244px;
+ }
+.divPreviewPhoto {
+    float: left;
+    height: 210px;
+    width: 274px;
+}
+.divUploadPhoto {
+    float: left;
+    margin: 18px 20px;
+    width: 274px;
+}
+.formCheckBoxs {
+    color: #3F7FCC;
+    margin-bottom: 14px;
+}
+.uploadImg {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+/*Предпросмотр фото - END*/
+
+/*Редактирование меню - START*/
+.menu {
+    margin: auto;
+}
+/*Редактирование меню - END*/
+
+
+/*Логин в админке - START*/
+/*.formLogin {*/
+    /*padding: 34px 30%;*/
+/*}*/
+
+.login {
+    width: 200px;
+}
+
+.login .form-field {
+    width: 284px;
+}
+
+.nameForm {
+    font-weight: bold;
+    text-align: center;
+}
+
+.errorMessage {
+    background-color: #F4E0E0;
+    border: 1px solid #FF0000;
+    -moz-border-radius: 0px 0px 15px 15px;
+    -webkit-border-radius: 0px 0px 15px 15px;
+    border-radius: 0px 0px 15px 15px;
+    color: #FF0000;
+    font-size: 14px;
+    margin-bottom: 6px;
+    margin-top: -20px;
+    text-align: center;
+    width: 298px;
+}
+/*Логин в админке - END*/
+
+/*КНОПКА - START*/
+.button {
+    border: 1px solid #0a3c59;
+    background: #3e779d;
+    background: -webkit-gradient(linear, left top, left bottom, from(#65a9d7), to(#3e779d));
+    background: -webkit-linear-gradient(top, #65a9d7, #3e779d);
+    background: -moz-linear-gradient(top, #65a9d7, #3e779d);
+    background: -ms-linear-gradient(top, #65a9d7, #3e779d);
+    background: -o-linear-gradient(top, #65a9d7, #3e779d);
+    background-image: -ms-linear-gradient(top, #65a9d7 0%, #3e779d 100%);
+    padding: 10.5px 21px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+    -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+    box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+    text-shadow: #7ea4bd 0 1px 0;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: helvetica, serif;
+    text-decoration: none;
+    vertical-align: middle;
+}
+.button:hover {
+    border: 1px solid #0a3c59;
+    text-shadow: #1e4158 0 1px 0;
+    background: #2e536b;
+    background: -webkit-gradient(linear, left top, left bottom, from(#82b3d4), to(#2e536b));
+    background: -webkit-linear-gradient(top, #82b3d4, #2e536b);
+    background: -moz-linear-gradient(top, #82b3d4, #2e536b);
+    background: -ms-linear-gradient(top, #82b3d4, #2e536b);
+    background: -o-linear-gradient(top, #82b3d4, #2e536b);
+    background-image: -ms-linear-gradient(top, #82b3d4 0%, #2e536b 100%);
+    color: #fff;
+}
+.button:active {
+    text-shadow: #1e4158 0 1px 0;
+    border: 1px solid #0a3c59;
+    background: #65a9d7;
+    background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#2e536b));
+    background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+    background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+    background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+    background: -o-linear-gradient(top, #3e779d, #65a9d7);
+    background-image: -ms-linear-gradient(top, #3e779d 0%, #65a9d7 100%);
+    color: #fff;
+}
+
+#newMenu {
+    margin: 21px 0 4px;
+}
+
+#newCategory {
+    margin: 21px 0 7px;
+}
+/*КНОПКА - END*/
+
+#deletePhoto {
+    color: #4985B7;
+    text-decoration: none;
+}
+
+#linkRegistration {
+    margin-top: 12px;
+    width: 87px;
+    text-decoration: none;
+}
+#users-save_user-form {
+    height: 100%;
+    padding-bottom: 59px;
+}
+#divRegisterButton {
+    float: right;
+    margin: 0;
+    width: 128px;
+}
+
+#userDataContainer {
+    border: 1px solid #BEBEBE;
+    -o-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    height: 179px;
+    margin: 27px 0 35px;
+    width: 615px;
+}
+#userDataTable {
+    font-family: inherit;
+    font-size: 12px;
+    margin: 8px 0 0 9px;
+}
+#userDataTable tr td:nth-child(1) {
+    font-weight: bold;
+    padding-right: 4px;
+    text-align: end;
+}
+#userPhoto {
+    float: left;
+    margin-top: 8px;
+    width: 193px;
+}
+#userData {
+    float: left;
+    width: 402px;
+}
+#userPreviewPhoto {
+    -o-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    height: auto;
+    width: 186px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+#editUserDataButtons {
+    margin: -95px 0 0;
+    text-align: left;
+    width: 144px;
+}
+#editUserDataButtons .submit-button {
+    margin-bottom: 12px;
+    width: 143px;
+}
+#users-edit_user-form {
+    height: 100%;
+    padding-bottom: 8px;
+}
+#userPhoto #dialog-add-file {
+    width: 186px;
+}
+.users_cabinet #userDataContainer {
+    height: 265px;
+}
+.users_cabinet #deletePhoto {
+    margin-left: 24px;
+}
+#tabs {
+    background: none repeat scroll 0 0 #F9EAF9;
+    margin-bottom: 16px;
+    margin-top: -25px;
+    min-height: 300px;
+    width: 609px;
+}
+#userListArtPopup {
+    min-height: 300px;
+    width: 800px;
+    padding-top: 16px;
+}
+/*Предпросмотр статьи - START*/
+.previewArticle {
+    border: 1px solid #BEBEBE;
+    background-color: rgba(255, 255, 255, 0.83);
+    height: 229px;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 740px;
+}
+.titleArticle {
+    color: #4682B4;
+    font-size: 20px;
+    font-weight: bold;
+    height: 31px;
+    margin-bottom: 3px;
+    text-align: center;
+}
+.titleArticle a {
+    color: #4682B4;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.overheadInfo {
+    height: 18px;
+    margin-bottom: 3px;
+    text-align: center;
+}
+.previewArticleContainer {
+    height: 167px;
+}
+.photoArticle {
+    float: left;
+    height: 152px;
+    /*margin-right: 7px;*/
+    padding: 7px;
+    width: 215px;
+    text-align: center;
+}
+.descriptionArticle {
+    color: #708090;
+    float: left;
+    font-family: verdana;
+    font-size: 14px;
+    height: 122px;
+    position: relative;
+    text-align: justify;
+    width: 494px;
+    padding-left: 11px;
+}
+.nameInfo {
+    color: #9DADBD;
+    font-family: Trebuchet MS;
+    font-size: 12px;
+    margin: 0 5px 0 11px;
+}
+.valueInfo {
+    color: #4682B4;
+    font-family: Trebuchet MS;
+    font-size: 12px;
+    font-weight: bold;
+}
+.readMore {
+    float: left;
+    height: 20px;
+    padding-right: 12px;
+    text-align: end;
+    width: 111px;
+}
+.readMore a{
+    color: #427EB0;
+    font-weight: bold;
+    text-decoration: none;
+}
+.titlePopup {
+    color: inactivecaption;
+    font-family: verdana;
+    font-size: 50px;
+    font-weight: bold;
+    height: 101px;
+    padding-top: 0;
+    text-align: center;
+}
+/*Предпросмотр статьи - END*/
+.formComment .form-container {
+    height: 100%;
+    margin: 0;
+}
+
+.greenButton {
+    border-top: 1px solid #87ff66;
+    background: #0fb000;
+    background: -webkit-gradient(linear, left top, left bottom, from(#04ed00), to(#0fb000));
+    background: -webkit-linear-gradient(top, #04ed00, #0fb000);
+    background: -moz-linear-gradient(top, #04ed00, #0fb000);
+    background: -ms-linear-gradient(top, #04ed00, #0fb000);
+    background: -o-linear-gradient(top, #04ed00, #0fb000);
+    padding: 5.5px 11px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: white;
+    font-size: 18px;
+    font-family: Georgia, Serif;
+    text-decoration: none;
+    vertical-align: middle;
+    width: 178px;
+    cursor: pointer;
+}
+.greenButton:hover {
+    border-top-color: #00f55e;
+    background: #00f55e;
+    color: #fdfffc;
+}
+.greenButton:active {
+    border-top-color: #2beb0e;
+    background: #2beb0e;
+}
+.closeButton {
+    background: url("/images/default/close.png") 100% 100% no-repeat;
+    background-size: cover;
+    height: 30px;
+    position: absolute;
+    width: 30px;
+    right: 0;
+    cursor: pointer;
+}
+#feedbackBtnContainer {
+    float: none;
+    margin: 0;
+    width: 100%;
+}
+.viewPhotoArticle {
+    border: 0 none;
+    height: auto;
+    text-align: center;
+    width: 400px;
+}

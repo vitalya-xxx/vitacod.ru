@@ -1,0 +1,5 @@
+RewriteEngine On 
+
+RewriteRule ^index.php$ /public/index.php
+RewriteRule ^images/(.*)$  /public/%{REQUEST_URI}
+RewriteRule ^(.*)$ http://9787399585.myjino.ru/public%{REQUEST_URI}
