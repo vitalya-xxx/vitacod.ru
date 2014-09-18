@@ -1,5 +1,9 @@
-RewriteEngine On 
+RewriteEngine on
 
-RewriteRule ^index.php$ /public/index.php
-RewriteRule ^images/(.*)$  /public/%{REQUEST_URI}
-RewriteRule ^(.*)$ http://9787399585.myjino.ru/public%{REQUEST_URI}
+# не позволять httpd отдавать файлы, начинающиеся с точки (.htaccess, .svn, .git и прочие)
+RedirectMatch 403 /\..*$
+# если директория или файл существуют, использовать их напрямую
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# иначе отправлять запрос на файл index.php
+RewriteRule . index.php
