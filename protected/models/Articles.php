@@ -250,15 +250,19 @@ class Articles extends CActiveRecord
 
     protected function beforeSave() {
         if(parent::beforeSave()){
+            $string     = !empty($this->description) ? $this->description : $this->text;
+            $charset    = mb_detect_encoding($string);
+            $strLength  = iconv_strlen($string, $charset);
+            
+            if (500 < $strLength) {
+                $string = strip_tags($string);
+                $string = substr($string, 0, 500);
+                $string = rtrim($string, "!,.-");
+                $string = substr($string, 0, strrpos($string, ' '));
 
-            $string = !empty($this->description) ? $this->description : $this->text;
-            $string = strip_tags($string);
-            $string = substr($string, 0, 500);
-            $string = rtrim($string, "!,.-");
-            $string = substr($string, 0, strrpos($string, ' '));
-
-            $this->description = $string."… ";
-
+                $this->description = $string."… ";
+            }
+            
             if($this->isNewRecord){
                 $this->dateCreate = new CDbExpression('NOW()');
                 if (Admins::model()->checkAccess(Yii::app()->user->role, Yii::app()->params['permission']['2'])) {
