@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    hljs.initHighlightingOnLoad();
     var lastChecked = null;
 //    setInterval(function () {updateListChat();}, 20000);
 //    showInfoPopup('info', false, '', 'Сайт находится на стадии разроботки!');
