@@ -13,5 +13,5 @@ $this->widget('CLinkPager', array(
     'prevPageLabel'     => 'предидущая',
     'nextPageLabel'     => 'следующая',
     'lastPageLabel'     => 'На последнюю',
-    'pages'             => $pages,                                          // модель пагинации переданная во View
+//    'pages'             => $pages,                                          // модель пагинации переданная во View
 ));

@@ -1,6 +1,6 @@
 $(document).ready(function(){
     var lastChecked = null;
-    setInterval(function () {updateListChat();}, 20000);
+//    setInterval(function () {updateListChat();}, 20000);
 //    showInfoPopup('info', false, '', 'Сайт находится на стадии разроботки!');
     var listMenusNavigation = jQuery('body').find('.listMenusNavigation');
     jQuery(listMenusNavigation).find('li.active a').addClass('activeMenu');

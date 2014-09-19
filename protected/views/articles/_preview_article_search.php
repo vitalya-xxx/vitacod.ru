@@ -5,7 +5,7 @@
         ));?>
     </div>
     <div class="overheadInfo">
-            <span class="nameInfo">Автор:</span><span class="valueInfo"><?php echo (!empty($data->idUser0["lastFirstName"]) ? $data->idUser0["lastFirstName"] : $data->idUser0["login"])?></span>
+            <span class="nameInfo">Автор:</span><span class="valueInfo"><?php echo (!empty($data["lastFirstName"]) ? $data["lastFirstName"] : $data["login"])?></span>
             <span class="nameInfo">Добавленна:</span><span class="valueInfo"><?php echo date('d.m.Y H:i', strtotime($data['dateCreate']))?></span>
             <span class="nameInfo">Просмотров:</span><span class="valueInfo"><?php echo $data['numberOfViews']?></span>
             <span class="nameInfo">Комментариев:</span><span class="valueInfo"><?php echo $data['commentsCount']?></span>
@@ -33,10 +33,10 @@
             ));?>
         </div>
         <div class="tagsContainer greanLink">
-            <?php $this->widget('zii.widgets.CMenu',array(
-            'items'         => $data->tagArray,
-            'htmlOptions'   => array('class'=>'tags'),
-        )); ?>
+            <?php /* $this->widget('zii.widgets.CMenu',array(
+                'items'         => $data['tagArray'],
+                'htmlOptions'   => array('class'=>'tags'),
+            )); */ ?>
         </div>
     </div>
 </div>

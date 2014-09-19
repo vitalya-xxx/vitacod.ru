@@ -127,7 +127,7 @@ class ArticlesController extends BaseController
         $count = Articles::model()->count($criteria);
         $pages = new CPagination($count);
 
-        $pages->setPageSize(3);
+        $pages->setPageSize(10);
         $pages->applyLimit($criteria);
 
         $result         = Articles::model()->findAll($criteria);
